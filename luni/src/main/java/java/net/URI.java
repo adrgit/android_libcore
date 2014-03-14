@@ -595,7 +595,9 @@ public final class URI implements Comparable<URI>, Serializable {
 
     private boolean isValidDomainName(String host) {
         try {
+
             URIEncoderDecoder.validateSimple(host, "-.");
+
         } catch (URISyntaxException e) {
             return false;
         }
